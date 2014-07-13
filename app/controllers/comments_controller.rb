@@ -5,11 +5,7 @@ class CommentsController < ApplicationController
 
   def create
     @comment = Comment.create! comment_params
-
-    respond_to do |format|
-      format.html { redirect_to action: :index }
-      format.js
-    end
+    redirect_to action: :index
   end
 
   private
